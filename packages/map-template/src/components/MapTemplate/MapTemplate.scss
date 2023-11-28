@@ -1,0 +1,68 @@
+@import '@mapsindoors/midt/build/css/mapsindoors-map-variables';
+@import '@mapsindoors/css/toggle.css';
+
+.mapsindoors-map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+
+    * {
+        box-sizing: border-box;
+        font-family: var(--font-family-system);
+    }
+
+    &--show-elements {
+        mi-floor-selector {
+            visibility: visible;
+        }
+
+        .venue-selector__button {
+            display: block;
+        }
+    }
+
+    &--hide-elements {
+        mi-floor-selector {
+            visibility: hidden;
+        }
+
+        .venue-selector__button {
+            display: none;
+        }
+    }
+
+    &--show-my-position {
+        mi-my-position {
+            display: block;
+        }
+    }
+
+    &--hide-my-position {
+        mi-my-position {
+            display: none;
+        }
+    }
+
+    .mi-floor-selector__list {
+        box-sizing: unset;
+    }
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    #mi_map_logo {
+        z-index: var(--z-index-dropdown) !important;
+    }
+}
+
+/*
+ * Utility class to prevent global scrolling for an element.
+ */
+.prevent-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none; // iOS fix
+}
