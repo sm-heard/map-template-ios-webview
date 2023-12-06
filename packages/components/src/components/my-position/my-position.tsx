@@ -354,9 +354,7 @@ export class MyPositionComponent {
             return;
         }
 
-        // const deviceType: DeviceType = this.parser.getDevice().type;
-        const deviceType: DeviceType = DeviceType.Phone;
-
+        const deviceType: DeviceType = this.parser.getDevice().type;
         this.canBeTracked = (
             typeof window.DeviceOrientationEvent === 'function' &&
             (deviceType === DeviceType.Phone || deviceType === DeviceType.Tablet) &&
