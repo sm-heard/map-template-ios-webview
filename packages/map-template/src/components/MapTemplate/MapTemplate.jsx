@@ -326,7 +326,7 @@ function MapTemplate({ apiKey, gmApiKey, mapboxAccessToken, venue, locationId, p
             setKioskOriginLocationId(kioskOriginLocationId);
             if (kioskOriginLocationId && isDesktop)  {
                 setShowVenueSelector(false);
-                // setShowPositionControl(false);
+                setShowPositionControl(false);
             } else {
                 setShowVenueSelector(true);
                 setShowPositionControl(true);
