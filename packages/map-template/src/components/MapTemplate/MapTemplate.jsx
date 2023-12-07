@@ -356,7 +356,7 @@ function MapTemplate({ apiKey, gmApiKey, mapboxAccessToken, venue, locationId, p
         if (locationsDisabledRef.current !== true && location.id !== kioskOriginLocationId) {
             setCurrentLocation(location);
             window.webkit.messageHandlers.notification.postMessage(location.id)
-            Android.showToast(location.id);
+            window.Android.showToast(location.id);
             
         }
     }
