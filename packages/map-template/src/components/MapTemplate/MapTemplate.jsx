@@ -355,7 +355,7 @@ function MapTemplate({ apiKey, gmApiKey, mapboxAccessToken, venue, locationId, p
     function locationClicked(location) {
         if (locationsDisabledRef.current !== true && location.id !== kioskOriginLocationId) {
             setCurrentLocation(location);
-            window.webkit.messageHandlers.notification.postMessage(location.id)
+            window.webkit.messageHandlers.notification.postMessage(location.id);
             window.Android.showToast(location.id);
             
         }
