@@ -359,7 +359,7 @@ function MapTemplate({ apiKey, gmApiKey, mapboxAccessToken, venue, locationId, p
             if (window.Android) {
                 // This code will run in Android's WebView
                 window.Android.showToast(location.id);
-            } else if (window.webkit.messageHandlers.locationAlert) {
+            } else if (window.webkit) {
                 // This code will run in iOS's WKWebView
                 window.webkit.messageHandlers.locationAlert.postMessage(location.id);
             }
